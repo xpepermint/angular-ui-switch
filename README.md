@@ -1,6 +1,6 @@
 # [angular](https://angularjs.org/)-ui-switch
 
-This is a simple iOS 7 style switch directive for AngularJS. You can use this module as you would use the default HTML checkbox input element. The is a super lightweight module and you can completely change the design using just CSS.
+This is a simple iOS 7 style switch directive for AngularJS. You can use this module as you would use the default HTML checkbox input element. This is a super lightweight module and you can completely change the design using just CSS.
 
 Supported by all modern browsers: Chrome, Firefox, Opera, Safari, IE8+
 
@@ -12,7 +12,7 @@ Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular way.
 
 Download the package from `github`. The package is also available over `npm install angular-ui-switch` or `bower install angular-ui-switch`.
 
-Include `javascript` and `css` file into your page.
+Include `javascript` and `css` files into your page.
 
 ```html
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ Insert the switch in your html template.
 
 ```html
 <form>
-  <switch name="enabled" ng-model="enabled"></switch>
+  <switch id="enabled" name="enabled" ng-model="enabled" class="green"></switch>
   <br>{{ enabled }}
 </form>
 ```
