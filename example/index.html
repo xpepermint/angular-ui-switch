@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/angular-ui-switch.min.css"/>
+</head>
+<body>
+
+  <form>
+    <switch name="enabled" ng-model="enabled"></switch>
+    <button ng-click="enabled=!enabled">Toggle</button>
+    <br>
+    Enabled: {{ enabled }}
+  </form>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+  <script src="/angular-ui-switch.js"></script>
+  <script src="/example/app.js"></script>
+
+</body>
+</html>
