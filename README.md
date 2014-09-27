@@ -44,7 +44,27 @@ Insert the switch in your html template.
 </form>
 ```
 
+## Design
+
+You can completely change the design. All the magic is hidden inside two CSS classes.
+
+```css
+.switch {
+  // frame
+}
+.switch small {
+  // button
+}
+.switch.checked {
+  // frame when enabled
+}
+.switch.checked small {
+  // button when enabled
+}
+```
+
 ## Notes
 
 Minify JS: `uglifyjs ui-switch.js --compress --mangle --comments`
+
 Minify CSS: `minify angular-ui-switch.css`
