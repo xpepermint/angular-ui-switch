@@ -3,6 +3,7 @@
   border: 1px solid #dfdfdf;
   position: relative;
   display: inline-block;
+  box-sizing: content-box;
   overflow: visible;
   width: 52px;
   height: 30px;
