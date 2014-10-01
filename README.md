@@ -63,8 +63,10 @@ You can completely change the design. All the magic is hidden inside two CSS cla
 }
 ```
 
-## Notes
+## Publishing
 
-Minify JS: `uglifyjs ui-switch.js --compress --mangle --comments`
+1. Update version in `package.json` and `bower.json`.
 
-Minify CSS: `minify angular-ui-switch.css`
+2. Run `make compile` to minify files.
+
+3. Run `make publish` to publish.
