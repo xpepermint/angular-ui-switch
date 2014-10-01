@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-switch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "iOS 7 style switch directive for AngularJS",
   "main": "ui-switch.js",
   "scripts": {

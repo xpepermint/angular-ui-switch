@@ -16,7 +16,7 @@ css:
 
 npm:
 	@echo "Publishing as npm ..."
-	# npm publish
+	npm publish
 
 bower:
 	@echo "Publishing as bower ..."
