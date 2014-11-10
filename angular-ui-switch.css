@@ -13,7 +13,7 @@
   cursor: pointer;
   box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset;
   transition: 0.3s ease-out all;
-  -webkit-transition: left 0.3s;
+  -webkit-transition: 0.3s ease-out all;
   top: -1px;
 }
 .switch small {
@@ -26,7 +26,7 @@
   top: 0px;
   left: 0px;
   transition: 0.3s ease-out all;
-  -webkit-transition: left 0.3s;
+  -webkit-transition: 0.3s ease-out all;
 }
 .switch.checked {
   background: rgb(100, 189, 99);
