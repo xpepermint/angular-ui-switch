@@ -50,16 +50,16 @@ You can completely change the design. All the magic is hidden inside two CSS cla
 
 ```css
 .switch {
-  // frame
+  /* frame */
 }
 .switch small {
-  // button
+  /* button */
 }
 .switch.checked {
-  // frame when enabled
+  /* frame when enabled */
 }
 .switch.checked small {
-  // button when enabled
+  /* button when enabled */
 }
 ```
 
