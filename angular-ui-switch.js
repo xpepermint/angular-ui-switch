@@ -18,6 +18,9 @@ angular.module('uiSwitch', [])
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
       html +=     ' style="display:none" />';
+      html +=     '<span class="switch-text">'; /*adding new container for switch text*/
+      html +=     attrs.on ? '<span class="on">'+attrs.on+'</span>' : ''; /*switch text on value set by user in directive html markup*/
+      html +=     attrs.off ? '<span class="off">'+attrs.off + '</span>' : ' ';  /*switch text off value set by user in directive html markup*/
       html += '</span>';
       return html;
     }
