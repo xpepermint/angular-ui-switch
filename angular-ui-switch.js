@@ -9,7 +9,8 @@ angular.module('uiSwitch', [])
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-      html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
+      html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '"' : '"') : '';
+      html +=   attrs.ngModel ? ' ng-keydown="' + attrs.ngModel + '= ($event.keyCode === 32) ? !' + attrs.ngModel + ' : ' + attrs.ngModel + ';"' : '';
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ' }"';
       html +=   '>';
       html +=   '<small></small>';
@@ -18,10 +19,12 @@ angular.module('uiSwitch', [])
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
       html +=     ' style="display:none" />';
-      html +=     '<span class="switch-text">'; /*adding new container for switch text*/
-      html +=     attrs.on ? '<span class="on">'+attrs.on+'</span>' : ''; /*switch text on value set by user in directive html markup*/
-      html +=     attrs.off ? '<span class="off">'+attrs.off + '</span>' : ' ';  /*switch text off value set by user in directive html markup*/
-      html += '</span>';
+      if (attrs.on || attrs.off) {
+        html +=     '<span class="switch-text">'; /*adding new container for switch text*/
+        html +=     attrs.on ? '<span class="on">'+attrs.on+'</span>' : ''; /*switch text on value set by user in directive html markup*/
+        html +=     attrs.off ? '<span class="off">'+attrs.off + '</span>' : ' ';  /*switch text off value set by user in directive html markup*/
+        html += '</span>';
+      }
       return html;
     }
   }
