@@ -2,7 +2,7 @@
   "name": "angular-ui-switch",
   "version": "0.1.0",
   "description": "iOS 7 style switch directive for AngularJS",
-  "main": "ui-switch.js",
+  "main": "angular-ui-switch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
