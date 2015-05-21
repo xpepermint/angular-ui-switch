@@ -32,7 +32,7 @@
         <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
         <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
         <p>
-            <button ng-click="onOff=!onOff">Toggle</button>
+            <button ng-click="yesNo=!yesNo">Toggle</button>
         </p>
         <p>
             Enabled: {{ yesNo }}
