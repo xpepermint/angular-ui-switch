@@ -52,11 +52,11 @@ Add optional on/off text
 </form>
 ```
 
-Disabled (no state change)
+Disabled (no state change via click)
 ```html
 <form>
-  <switch id="disabled" name="disabled" ng-model="enabled" is-disabled="true"></switch>
-  <br>{{ enabled }}
+  <switch id="disabledTest" name="disabledTest" ng-model="disabledTestModel" is-disabled="true"></switch>
+  <br>{{ disabledTestModel }}
 </form>
 ```
 
