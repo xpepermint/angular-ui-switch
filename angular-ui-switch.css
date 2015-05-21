@@ -73,6 +73,9 @@
 
 .switch.checked .on {
   display:block;
+}
 
+.switch[is-disabled="true"]{
+    cursor: not-allowed !important;
 }
 
