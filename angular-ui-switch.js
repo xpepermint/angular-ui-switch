@@ -8,9 +8,19 @@ angular.module('uiSwitch', [])
         , transclude: true
         , scope: {
             isDisabled: '@',
-            ngModel: '='
+            ngModel: '=',
+            ngChange: '@'
         }
         , controller: function($scope){
+            $scope.updateSwitch = function(element){
+                //set style
+                $scope.setElementStyle(element);
+                //call additional fn
+                if($scope.ngChange){
+                    $scope.$parent[$scope.ngChange]();
+                }
+            };
+            
             $scope.setElementStyle = function(element){
                 if($scope.ngModel){
                     element.addClass('checked');
@@ -36,23 +46,28 @@ angular.module('uiSwitch', [])
                 html += '</span>';
                 return html;
         }
-        , link: function(scope, element, attrs, controller){
+        , link: function($scope, element, attrs, controller){
             //apply initial style
-            scope.setElementStyle(element);
+            $scope.setElementStyle(element);
             //add click event when not disabled
-            if(attrs.isDisabled == 'false'){
+            if(!angular.isDefined(attrs.isDisabled) || attrs.isDisabled == 'false'){
                 element.bind('click', function(){
-                    scope.$apply(function(){
+                    $scope.$apply(function(){
                         //toggle
-                        scope.ngModel = !scope.ngModel;
-                        //set style
-                        scope.setElementStyle(element);
-                        //call additional fn
-                        if(attrs.ngChange){
-                            attrs.ngChange();
-                        }
+                        $scope.ngModel = !$scope.ngModel;
                     });
                 });
+                //add watch
+                $scope.$watch(
+                    function(){
+                        return $scope.ngModel;
+                    },
+                    function(newValue, oldValue){
+                        if(newValue != oldValue){
+                            $scope.updateSwitch(element);
+                        }
+                    }
+                );
             }
         }
     }

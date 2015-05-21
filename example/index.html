@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../angular-ui-switch.min.css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
-    <script src="../angular-ui-switch.js"></script>
-    <script src="app.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../angular-ui-switch.min.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+        <script src="../angular-ui-switch.js"></script>
+        <script src="app.js"></script>
+    </head>
 <body>
 
-  <form data-ng-controller="MyController">
-    <switch name="enabled" ng-model="enabled" ng-change="changeCallback"></switch>
-    <p>
-        <button ng-click="enabled=!enabled">Toggle</button>
-    </p>
-    <p>
-        Enabled: {{ enabled }}
-    </p>
-     <!--Examples of using switch text on/off values.  These values can be anything.  First example shows basic on/off-->
+    <form data-ng-controller="MyController">
+        <switch name="enabled" ng-model="enabled" ng-change="changeCallback"></switch>
+        <p>
+            <button ng-click="enabled=!enabled">Toggle</button>
+        </p>
+        <p>
+            Enabled: {{ enabled }}
+        </p>
+        
+        <!--Examples of using switch text on/off values.  These values can be anything.  First example shows basic on/off-->
+        <switch name="onOff" ng-model="onOff" on="on" off="off"></switch>
+        <p>
+            <button ng-click="onOff=!onOff">Toggle</button>
+        </p>
+        <p>
+            Enabled: {{ onOff }}
+        </p>  
 
-    <switch name="onOff" ng-model="onOff" on="on" off="off"></switch>
-     <p>
-        <button ng-click="onOff=!onOff">Toggle</button>
-    </p>
-    <p>
-        Enabled: {{ onOff }}
-    </p>  
+        <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
+        <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
+        <p>
+            <button ng-click="onOff=!onOff">Toggle</button>
+        </p>
+        <p>
+            Enabled: {{ yesNo }}
+        </p>
 
-     <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
-     <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
-     <p>
-        <button ng-click="onOff=!onOff">Toggle</button>
-    </p>
-    <p>
-        Enabled: {{ yesNo }}
-    </p>                 
-  </form>
+        <!--Examples of using the is-disabled parameter -->
+        <p>
+            <div>Disabled - On<div>
+            <switch name="disabledOn" ng-model="disabledOn" is-disabled="true"></switch>
+        </p>
+        <p>
+            <div>Disabled - Off<div>
+            <switch name="disabledOff" ng-model="disabledOff" is-disabled="true"></switch>
+        </p>
+    </form>
 
 </body>
 </html>

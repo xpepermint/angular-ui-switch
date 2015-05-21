@@ -52,6 +52,14 @@ Add optional on/off text
 </form>
 ```
 
+Disabled (no state change)
+```html
+<form>
+  <switch id="disabled" name="disabled" ng-model="enabled" is-disabled="true"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
 ## Design
 
 You can completely change the design. All the magic is hidden inside two CSS classes.
