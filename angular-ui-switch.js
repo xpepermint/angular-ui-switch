@@ -1,6 +1,6 @@
 angular.module('uiSwitch', [])
 
-.directive('switch', function($compile){
+.directive('switch', function($compile, $parse){
     return {
           require: 'ngModel'
         , restrict: 'AE'
@@ -15,10 +15,6 @@ angular.module('uiSwitch', [])
             $scope.updateSwitch = function(element){
                 //set style
                 $scope.setElementStyle(element);
-                //call additional fn
-                if($scope.ngChange){
-                    $scope.$parent[$scope.ngChange]();
-                }
             };
             
             $scope.setElementStyle = function(element){
@@ -51,11 +47,13 @@ angular.module('uiSwitch', [])
             $scope.setElementStyle(element);
             //add click event when not disabled
             if(!angular.isDefined(attrs.isDisabled) || attrs.isDisabled == 'false'){
-                element.bind('click', function(){
+                element.bind('click', function(event){
                     $scope.$apply(function(){
-                        //toggle
-                        $scope.ngModel = !$scope.ngModel;
+                        $scope.ngModel = !$scope.ngModel; //toggle
                     });
+                    if($scope.ngChange){
+                        $scope.$parent[$scope.ngChange]();
+                    }
                 });
                 //add watch
                 $scope.$watch(
