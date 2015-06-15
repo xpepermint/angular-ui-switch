@@ -3,12 +3,12 @@ angular.module('uiSwitch', [])
 .directive('switch', function(){
   return {
     restrict: 'AE'
-  , replace: true
+  , replace: false
   , transclude: true
   , template: function(element, attrs) {
       var html = '';
       html += '<span';
-      html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
+      html +=   ' class="switch' + (attrs.className ? ' ' + attrs.className : '') + '"';;
       html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ' }"';
       html +=   '>';
