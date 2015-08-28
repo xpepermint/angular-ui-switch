@@ -27,7 +27,7 @@
     </p>
     <p>
         Enabled: {{ onOff }}
-    </p>  
+    </p>
 
      <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
      <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
@@ -36,7 +36,17 @@
     </p>
     <p>
         Enabled: {{ yesNo }}
-    </p>                 
+    </p>
+
+    <!--Examples of using switch disabled states. -->
+
+   <switch name="enabled" ng-model="enabled" disabled="false"></switch>
+    <p>
+       <button ng-click="enabled=!enabled">Toggle</button>
+   </p>
+   <p>
+       Enabled: {{ enabled }}
+   </p>
   </form>
 
 </body>
