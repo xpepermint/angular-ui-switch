@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../angular-ui-switch.min.css"/>
+  <link rel="stylesheet" href="../angular-ui-switch.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
     <script src="../angular-ui-switch.js"></script>
     <script src="app.js"></script>
@@ -27,16 +27,25 @@
     </p>
     <p>
         Enabled: {{ onOff }}
-    </p>  
+    </p>
 
-     <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
-     <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
+    <!--Examples of using the nonsense words lorem/ipsum in the on/off values.  Because these are wider, added an option "wide" class to allow for more room-->
+    <switch name="yesNo" ng-model="yesNo" on="lorem" off="ipsum" class="wide"></switch>
      <p>
         <button ng-click="onOff=!onOff">Toggle</button>
     </p>
     <p>
         Enabled: {{ yesNo }}
-    </p>                 
+    </p>
+
+    <!--Examples of using switch disabled states. -->
+    <switch name="disabled" ng-model="disabled" disabled="true"></switch>
+    <p>
+        <button ng-click="disabled=!disabled">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ disabled }}
+    </p>
   </form>
 
 </body>
