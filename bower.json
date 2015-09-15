@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-switch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": ["angular-ui-switch.js", "angular-ui-switch.css"],
   "authors": [
     "xpeper <xpepermint@gmail.com>"
