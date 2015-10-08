@@ -46,6 +46,22 @@
     <p>
         Enabled: {{ disabled }}
     </p>
+    <!--Examples of using switch small. -->
+    <switch size="small" name="sizeSmall" ng-model="sizeSmall" ng-change="changeCallback"></switch>
+    <p>
+        <button ng-click="sizeSmall=!sizeSmall">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ sizeSmall }}
+    </p>
+    <!--Examples of using switch large. -->
+    <switch size="large" name="sizeLarge" ng-model="sizeLarge" ng-change="changeCallback"></switch>
+    <p>
+        <button ng-click="sizeLarge=!sizeLarge">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ sizeLarge }}
+    </p>
   </form>
 
 </body>

@@ -80,3 +80,36 @@
   opacity: .50;
   cursor: not-allowed;
 }
+
+
+/* Switchery sizes. */
+
+.switchery-small {
+  border-radius: 20px;
+  height: 20px;
+  width: 33px;
+}
+
+.switchery-small > small {
+  height: 20px;
+  width: 20px;
+}
+
+.switch.switchery-small.checked small {
+  left: 13px;
+}
+
+.switchery-large {
+  border-radius: 40px;
+  height: 40px;
+  width: 66px;
+}
+
+.switchery-large > small {
+  height: 40px;
+  width: 40px;
+}
+
+.switch.switchery-large.checked small {
+  left: 26px;
+}
