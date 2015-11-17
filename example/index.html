@@ -47,6 +47,14 @@
           Enabled: {{ disabled }}
       </p>
 
+			<!--Example of using switch disabled states with dynamic update (enable after 1s). -->
+    <switch name="disabled" ng-model="disabled" disabled="dynamicDisabled"></switch>
+    <p>
+        <button ng-click="disabled=!disabled">Toggle</button>
+    </p>
+      <p>
+          Enabled: {{ disabled }}
+      </p>
 
       <h4>Using invert - which shows the switch in the opposite arrangement</h4>
       <!--Examples of using switch inverted. -->
