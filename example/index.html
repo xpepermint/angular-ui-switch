@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
@@ -43,9 +43,28 @@
     <p>
         <button ng-click="disabled=!disabled">Toggle</button>
     </p>
+      <p>
+          Enabled: {{ disabled }}
+      </p>
+
+			<!--Example of using switch disabled states with dynamic update (enable after 1s). -->
+    <switch name="disabled" ng-model="disabled" disabled="dynamicDisabled"></switch>
     <p>
-        Enabled: {{ disabled }}
+        <button ng-click="disabled=!disabled">Toggle</button>
     </p>
+      <p>
+          Enabled: {{ disabled }}
+      </p>
+
+      <h4>Using invert - which shows the switch in the opposite arrangement</h4>
+      <!--Examples of using switch inverted. -->
+      <switch name="inverted" ng-model="inverted" invert="true"></switch>
+      <p>
+          <button ng-click="inverted=!inverted">Toggle</button>
+      </p>
+      <p>
+          Enabled: {{ inverted }}
+      </p>
   </form>
 
 </body>

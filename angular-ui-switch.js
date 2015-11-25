@@ -9,8 +9,8 @@ angular.module('uiSwitch', [])
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-      html +=   attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
-      html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
+      html +=   attrs.ngModel ? ' ng-click="' + attrs.ngDisabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
+      html +=   ' ng-class="{ checked:' + (attrs.invert === 'true' ? '!' : '') + attrs.ngModel  + ', disabled:' + attrs.ngDisabled + ' }"';
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
