@@ -7,6 +7,8 @@ angular.module('app', ['uiSwitch'])
   $scope.disabled = true;
   $scope.sizeSmall = true;
   $scope.sizeLarge = true;
+  $scope.sizeClassSmall = true;
+  $scope.sizeClassLarge = true;
 
 
   $scope.changeCallback = function() {

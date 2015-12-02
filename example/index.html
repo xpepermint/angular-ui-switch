@@ -60,7 +60,23 @@
         <button ng-click="sizeLarge=!sizeLarge">Toggle</button>
     </p>
     <p>
-        Enabled: {{ sizeLarge }}
+      Enabled: {{ sizeLarge }}
+    </p>
+    <!--Examples of using switch class sm for small. -->
+    <switch class="sm" name="sizeClassSmall" ng-model="sizeClassSmall"></switch>
+    <p>
+        <button ng-click="sizeClassSmall=!sizeClassSmall">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ sizeClassSmall }}
+    </p>
+    <!--Examples of using switch class lg for large. -->
+    <switch class="lg" name="sizeClassLarge" ng-model="sizeClassLarge"></switch>
+    <p>
+        <button ng-click="sizeClassLarge=!sizeClassLarge">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ sizeClassLarge }}
     </p>
   </form>
 
