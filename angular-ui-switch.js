@@ -18,11 +18,8 @@ angular.module('uiSwitch', [])
 
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-
       html += attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
-
-
 
       if (attrs.onValue && attrs.offValue) {
           html += attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=(' + attrs.ngModel + '=== \'' + (attrs.onValue || true) + '\' ? \'' + (attrs.offValue || false) + '\':\'' + (attrs.onValue || true) + '\')' + extraMethod + '"' : '';
