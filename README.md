@@ -52,6 +52,22 @@ Add optional on/off text
 </form>
 ```
 
+Add custom values for `ON` / `OFF` (if your model is not based on true/false values)
+```html
+<form>
+  <switch id="enabled" name="enabled" ng-model="enabled" on-value="ACTIVE" off-value="INACTIVE" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+Add a custom method to `on-click` event
+```html
+<form>
+  <switch id="enabled" name="enabled" ng-model="enabled" on-click-change="myMethod(with, args)" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
 Disabled state
 ```html
 <form>
