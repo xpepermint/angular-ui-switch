@@ -1,3 +1,10 @@
+/* commonjs package manager support (eg componentjs) */
+if (typeof module !== "undefined" && typeof exports !== "undefined" && module.exports === exports){
+  module.exports = 'uiSwitch';
+}
+
+var angular = require('angular');
+
 angular.module('uiSwitch', [])
 
 .directive('switch', function(){
