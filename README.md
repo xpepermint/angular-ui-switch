@@ -79,6 +79,46 @@ You can completely change the design. All the magic is hidden inside two CSS cla
 }
 ```
 
+## Sizes
+
+You can change the sizes of the switch element via size. Giving it a value of small or large will result in adding switchery-small or switchery-large classes respectively, which will change the switch size.
+
+Not using this property will render the default sized switch element.
+
+```html
+<form>
+  <switch id="enabled" name="enabled" ng-model="enabled" size="small" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+```html
+<form>
+  <switch id="enabled" name="enabled" ng-model="enabled" size="small" class="green"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+Alternatively you could just use a class attribute of `class="sm"` or `class="lg"`, which will change the switch size.
+
+Again, not using size element or class attributes property will render the default sized switch element.
+
+```html
+<form>
+  <switch class="sm" id="enabled" name="enabled" ng-model="enabled"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+```html
+<form>
+  <switch class="lg" id="enabled" name="enabled" ng-model="enabled"></switch>
+  <br>{{ enabled }}
+</form>
+```
+
+![YoomJS](https://raw.githubusercontent.com/EskoCruz/angular-ui-switch/master/switch-size.png)
+
 ## Publishing
 
 1. Update version in `package.json` and `bower.json`.

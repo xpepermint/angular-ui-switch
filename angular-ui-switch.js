@@ -8,7 +8,9 @@ angular.module('uiSwitch', [])
   , template: function(element, attrs) {
       var html = '';
       html += '<span';
-      html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
+      html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '');
+      html +=   attrs.size ? ' switchery-' + attrs.size : '';  /*switch size from small to large*/
+      html +=   '"';
       html +=   attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
       html +=   '>';
