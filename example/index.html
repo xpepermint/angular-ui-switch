@@ -39,13 +39,24 @@
     </p>
 
     <!--Examples of using switch disabled states. -->
-    <switch name="disabled" ng-model="disabled" disabled="true"></switch>
+    <switch name="disabled" ng-model="disabled" disabled></switch>
     <p>
         <button ng-click="disabled=!disabled">Toggle</button>
     </p>
     <p>
         Enabled: {{ disabled }}
     </p>
+    <p>It's just disabled. Can't change it.</p>
+
+    <!--Examples of using switch ng-disabled states. -->
+    <switch name="ngDisabled" ng-model="ngDisabled" ng-disabled="true"></switch>
+    <p>
+        <button ng-click="ngDisabled=!ngDisabled">Toggle</button>
+    </p>
+    <p>
+        Enabled: {{ ngDisabled }}
+    </p>
+    <p>Fix the change event, make ng-chang not like ng-click.</p>
   </form>
 
 </body>
