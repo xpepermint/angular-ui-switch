@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/antonio_antuan/angular-ui-switch',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package.tgz not in flight; packing
+9 verbose correctMkdir /home/antonio_antuan/.npm correctMkdir not in flight; initializing
+10 info lifecycle angular-ui-switch@0.1.2~prepublish: angular-ui-switch@0.1.2
+11 silly lifecycle angular-ui-switch@0.1.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package.tgz',
+12 verbose tar pack   '/home/antonio_antuan/angular-ui-switch' ]
+13 verbose tarball /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package.tgz
+14 verbose folder /home/antonio_antuan/angular-ui-switch
+15 verbose addLocalTarball adding from inside cache /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package.tgz
+16 verbose correctMkdir /home/antonio_antuan/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd angular-ui-switch@0.1.2
+18 verbose afterAdd /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package/package.json not in flight; writing
+19 verbose correctMkdir /home/antonio_antuan/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package/package.json written
+21 silly publish { name: 'angular-ui-switch',
+21 silly publish   version: '0.1.2',
+21 silly publish   description: 'iOS 7 style switch directive for AngularJS',
+21 silly publish   main: 'angular-ui-switch.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git://github.com/xpepermint/angular-ui-switch.git' },
+21 silly publish   keywords:
+21 silly publish    [ 'angular',
+21 silly publish      'angularjs',
+21 silly publish      'ui',
+21 silly publish      'directive',
+21 silly publish      'switch',
+21 silly publish      'on',
+21 silly publish      'off',
+21 silly publish      'button',
+21 silly publish      'checkbox',
+21 silly publish      'form' ],
+21 silly publish   author: { name: 'xpeper', email: 'xpepermint@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/xpepermint/angular-ui-switch/issues' },
+21 silly publish   homepage: 'https://github.com/xpepermint/angular-ui-switch',
+21 silly publish   devDependencies: { minify: '^1.0.4', 'uglify-js': '^2.4.15' },
+21 silly publish   readme: '# [angular](https://angularjs.org/)-ui-switch\n\nThis is a simple iOS 7 style switch directive for AngularJS. You can use this module as you would use the default HTML checkbox input element. This is a super lightweight module and you can completely change the design using just CSS.\n\nSupported by all modern browsers: Chrome, Firefox, Opera, Safari, IE8+\n\n![YoomJS](https://raw.githubusercontent.com/xpepermint/angular-ui-switch/master/logo.png)\n\nInspired by [switchery](https://github.com/abpetkov/switchery) - in angular way.\n\n## Installation\n\nDownload the package from `github`. The package is also available over `npm install angular-ui-switch` or `bower install angular-ui-switch`.\n\nInclude `javascript` and `css` files into your page.\n\n```html\n<!DOCTYPE html>\n<html lang="en" ng-app="app">\n<head>\n  ...\n  <link rel="stylesheet" href="/ui-switch.min.css"/>\n</head>\n<body>\n  ...\n  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>\n  <script src="/ui-switch.min.js"></script>\n</body>\n</html>\n```\n\nDeclare a dependency on the module.\n\n```js\nangular.module(\'myModule\', [\'uiSwitch\']);\n```\n\nInsert the switch in your html template.\n\n```html\n<form>\n  <switch id="enabled" name="enabled" ng-model="enabled" class="green"></switch>\n  <br>{{ enabled }}\n</form>\n```\n\nAdd optional on/off text\n```html\n<form>\n  <switch id="enabled" name="enabled" ng-model="enabled" on="On" off="Off" class="green"></switch>\n  <br>{{ enabled }}\n</form>\n```\n\nDisabled state\n```html\n<form>\n  <switch id="enabled" name="enabled" ng-model="enabled" disabled="true" class="green"></switch>\n  <br>{{ enabled }}\n</form>\n```\n\n## Design\n\nYou can completely change the design. All the magic is hidden inside two CSS classes.\n\n```css\n.switch {\n  /* frame */\n}\n.switch small {\n  /* button */\n}\n.switch.checked {\n  /* frame when enabled */\n}\n.switch.checked small {\n  /* button when enabled */\n}\n```\n\n## Publishing\n\n1. Update version in `package.json` and `bower.json`.\n\n2. Run `make compile` to minify files.\n\n3. Run `make publish` to publish.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'bde4711ed82d4e54c8173232e2e6fc17c2d2b3e4',
+21 silly publish   _id: 'angular-ui-switch@0.1.2',
+21 silly publish   _shasum: 'f82a987c2f0c243c9cd22dd65387327f1c997aa8',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name angular-ui-switch
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'angular-ui-switch',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'angular-ui-switch',
+26 silly mapToRegistry   name: 'angular-ui-switch',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/angular-ui-switch
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/antonio_antuan/.npm/angular-ui-switch/0.1.2/package.tgz
+30 verbose request uri https://registry.npmjs.org/angular-ui-switch
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 6:13:14 PM
+33 verbose request using bearer token for auth
+34 verbose request id e9c0a041bc59ee03
+35 http request PUT https://registry.npmjs.org/angular-ui-switch
+36 http 403 https://registry.npmjs.org/angular-ui-switch
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '111',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 01 Nov 2016 15:13:15 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-ams4435-AMS',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1478013194.495332,VS0,VE687',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /home/antonio_antuan/.npm/registry.npmjs.org/angular-ui-switch on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you do not have permission to publish "angular-ui-switch". Are you logged in as the correct user? : angular-ui-switch
+40 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid angular-ui-switch
+43 verbose cwd /home/antonio_antuan/angular-ui-switch
+44 error Linux 4.8.4-1-ARCH
+45 error argv "/usr/bin/node" "/usr/bin/npm" "publish"
+46 error node v6.9.1
+47 error npm  v3.10.9
+48 error code E403
+49 error you do not have permission to publish "angular-ui-switch". Are you logged in as the correct user? : angular-ui-switch
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
