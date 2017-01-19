@@ -19,6 +19,17 @@
     <p>
         Enabled: {{ enabled }}
     </p>
+	
+	<!-- Example with callback function with arguments -->
+	<switch name="enabledWithArguments" ng-model="enabledWithArguments" ng-change="changeCallbackWithArguments({'someArgument': 'Awesome'})"></switch>
+    <p>
+        <button ng-click="enabledWithArguments=!enabledWithArguments">Toggle</button>
+    </p>
+    <p>
+        EnabledWithArguments: {{ enabledWithArguments }}
+    </p>
+	
+	
      <!--Examples of using switch text on/off values.  These values can be anything.  First example shows basic on/off-->
 
     <switch name="onOff" ng-model="onOff" on="on" off="off"></switch>
