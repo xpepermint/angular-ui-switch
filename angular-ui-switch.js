@@ -6,11 +6,13 @@ angular.module('uiSwitch', [])
   , replace: true
   , transclude: true
   , template: function(element, attrs) {
+      var ngClickExpr = (attrs.ngDisabled ? attrs.ngDisabled : (attrs.disabled ? true : false)) + '? true : (' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()' : '') + ')';
+
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-      html +=   attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
-      html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
+      html +=   attrs.ngModel ? ' ng-click="' + ngClickExpr + '"' : '';
+      html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + (attrs.ngDisabled || attrs.disabled) + ' }"';
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
